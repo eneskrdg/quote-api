@@ -1,0 +1,94 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(87, 179, 241);
+}
+
+.App {
+  font-size: 1.5em;
+  font-family: "IBM Plex Serif", serif;
+  display: flex;
+  position: absolute;
+  width: 40%;
+  height: 16em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  background-color: #ffebcd;
+  color: #000;
+  border-radius: 0.4em;
+  align-items: center;
+  padding: 2%;
+}
+.button {
+  color: #6e4c1a;
+  border: 0.05em solid;
+  border-radius: 0.3em;
+  font-size: 1em;
+  font-weight: 500;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+h2 {
+  font-size: 1.75em;
+  margin: 0.2em 0 0;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+p {
+  font-weight: 500;
+  margin-bottom: 0.2em;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+.space {
+  margin-top: 50px;
+}
+.sag {
+  font-size: 1em;
+  font-weight: 500;
+  position: absolute;
+  right: 50px;
+
+  font-size: 1.05em;
+  text-align: end;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.c {
+  font-size: 1em;
+  font-weight: 500;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+.d {
+  font-size: 1em;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.listt {
+  color: #6e4c1a;
+  border: 0.05em solid;
+  border-radius: 0.3em;
+  font-size: 1em;
+  font-weight: 500;
+  position: absolute;
+  right: 150px;
+  bottom: 20px;
+}

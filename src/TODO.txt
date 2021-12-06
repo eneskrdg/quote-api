@@ -1,0 +1,4 @@
+1 - Get authors quote using that api -> https://quotable.io/search/quotes?query=aldous%20huxley, just insert your author name instead of aldous huxley.
+2 - Place a More Info button about author, so if user clicks we should be able to bio of user. Use that api -> https://quotable.io/authors?slug=albert-einstein
+3 - Improve design
+4 - Use a quality font instead of defaults.

@@ -1,0 +1,1 @@
+export const randomNum = (array) => Math.floor(Math.random() * array.length);
