@@ -15,7 +15,12 @@ const App = () => {
     colorizeTextsAndBackground();
     handleFetchQuote();
   };
+  const e= document.querySelector(".listt")
+ console.log(e)
+  
 
+  
+  
   const handleFetchQuote = async () => {
     try {
       setIsLoading(true);
@@ -63,16 +68,17 @@ const App = () => {
         <p className="space">{quote?.content}</p>
 
         <div></div>
-        <p className="sag">{quote?.author}</p>
+        <p className="content">{quote?.author}</p>
 
         <button className="button" onClick={getQuote}>
           Get Quote
         </button>
 
-        <select className="listt">
+        <select className="authorList">
           {authors?.results?.map((author) => (
-            <option>{author.name}</option>
+            <option value={author.name}>{author.name}</option>
           ))}
+          
         </select>
       </div>
     </div>

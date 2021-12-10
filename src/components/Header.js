@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <div className="row">
       <div className="column">
-        <FontAwesomeIcon icon={faCoffee} className="d" />
+        <FontAwesomeIcon icon={faCoffee} className="leftIcon" />
       </div>
       <div className="column">
         <h2>Get Quote</h2>
       </div>
       <div className="column">
-        <FontAwesomeIcon icon={faCoffee} className="c" />
+        <FontAwesomeIcon icon={faCoffee} className="rightIcon" />
       </div>
     </div>
   );

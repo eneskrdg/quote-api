@@ -8,7 +8,7 @@ body {
 
 .App {
   font-size: 1.5em;
-  font-family: "IBM Plex Serif", serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   position: absolute;
   width: 40%;
@@ -27,14 +27,14 @@ body {
   color: #6e4c1a;
   border: 0.05em solid;
   border-radius: 0.3em;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 500;
   position: absolute;
   right: 20px;
   bottom: 20px;
 }
 h2 {
-  font-size: 1.75em;
+  font-size: 1em;
   margin: 0.2em 0 0;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -42,6 +42,7 @@ h2 {
 }
 p {
   font-weight: 500;
+  font-size: 0.8em;
   margin-bottom: 0.2em;
   font-style: italic;
   text-align: center;
@@ -52,7 +53,7 @@ p {
 .space {
   margin-top: 50px;
 }
-.sag {
+.content {
   font-size: 1em;
   font-weight: 500;
   position: absolute;
@@ -63,14 +64,14 @@ p {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.c {
+.leftIcon {
   font-size: 1em;
   font-weight: 500;
   position: absolute;
   right: 50px;
   top: 50px;
 }
-.d {
+.rightIcon {
   font-size: 1em;
   font-weight: 500;
   position: absolute;
@@ -82,7 +83,7 @@ p {
   display: flex;
 }
 
-.listt {
+.authorList {
   color: #6e4c1a;
   border: 0.05em solid;
   border-radius: 0.3em;

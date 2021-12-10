@@ -4,15 +4,15 @@ export const colorizeTextsAndBackground = () => {
   const elementList = [
     {
       isColor: true,
-      selector: "d",
+      selector: "leftIcon",
     },
     {
       isColor: true,
-      selector: "c",
+      selector: "rightIcon",
     },
     {
       isColor: false,
-      selector: "listt",
+      selector: "authorList",
     },
     {
       isColor: false,
