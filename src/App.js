@@ -15,8 +15,7 @@ const App = () => {
     colorizeTextsAndBackground();
     handleFetchQuote();
   };
-  const e= document.querySelector(".listt")
- console.log(e)
+
   
 
   
