@@ -2,25 +2,30 @@ import { useState, useEffect } from "react";
 import "../src/App.css";
 
 import { colorizeTextsAndBackground } from "./util/colorizer";
-import { fetchRandomQuote, getAuthorList } from "./service/quote";
+import { shuffleArray } from "./util/shuffleArray";
+import {
+  fetchRandomQuote,
+  getAuthorList,
+  getAuthorsQuotes,
+} from "./service/quote";
 
 import Header from "./components/Header";
 
 const App = () => {
   const [quote, setQuote] = useState({});
   const [authors, setAuthors] = useState([]);
+  const [selectedAuthor, setSelectedAutor] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const getQuote = () => {
+    if (selectedAuthor) {
+      handleOnChange(selectedAuthor);
+      return;
+    }
     colorizeTextsAndBackground();
     handleFetchQuote();
   };
-  const e= document.querySelector(".listt")
- console.log(e)
-  
 
-  
-  
   const handleFetchQuote = async () => {
     try {
       setIsLoading(true);
@@ -31,6 +36,7 @@ const App = () => {
       console.error("Something went wrong!");
     }
   };
+
   const handleFetchAuthor = async () => {
     try {
       setIsLoading(true);
@@ -46,6 +52,13 @@ const App = () => {
     handleFetchQuote();
     handleFetchAuthor();
   }, []);
+
+  const handleOnChange = async (authorSlug = "") => {
+    const response = await getAuthorsQuotes(authorSlug);
+
+    setSelectedAutor(authorSlug);
+    setQuote(shuffleArray(response.data.results)[0]);
+  };
 
   if (isLoading)
     return (
@@ -74,11 +87,17 @@ const App = () => {
           Get Quote
         </button>
 
-        <select className="authorList">
+        <select
+          className="authorList"
+          onChange={(event) => {
+            handleOnChange(event.target.value);
+          }}
+        >
           {authors?.results?.map((author) => (
-            <option value={author.name}>{author.name}</option>
+            <option value={author.slug} key={author._id}>
+              {author.name}
+            </option>
           ))}
-          
         </select>
       </div>
     </div>
