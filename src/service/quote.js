@@ -8,3 +8,7 @@ export const fetchRandomQuote = async () => {
 export const getAuthorList = async () => {
   return axios.get(`${BASE_URL}/authors`);
 };
+
+export const getAuthorsQuotes = async (authorsSlug = "") => {
+  return axios.get(`${BASE_URL}/quotes?author=${authorsSlug}`);
+};
